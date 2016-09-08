@@ -1,9 +1,0 @@
-{
-  "devstars": [
-    {"id": 1, "name": "George Green", "age": 23, "story": "I am from Wellington.", "image": "https://avatars1.githubusercontent.com/u/18493037?v=3&s=460"},
-    {"id": 2, "name": "Guanzhou Zhao", "age": 27, "story": "I am from Luoyang.", "image": "https://avatars2.githubusercontent.com/u/19282953?v=3&s=460"},
-    {"id": 3, "name": "Steve Sharp", "age": 27, "story": "I am from Zimbabwe.", "image": "https://avatars2.githubusercontent.com/u/13898345?v=3&s=460"},
-    {"id": 4, "name": "Lisa Seeto", "age": 25, "story": "I am from Australia.", "image": "https://avatars0.githubusercontent.com/u/20085843?v=3&s=460"},
-    {"id": 5, "name": "Jock Dalby", "age": 19, "story": "I am from Northland.", "image": "https://avatars2.githubusercontent.com/u/19864300?v=3&s=460"}
-  ]
-}
