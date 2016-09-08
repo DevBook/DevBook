@@ -1,0 +1,25 @@
+{
+  "name": "dev-book",
+  "version": "1.0.0",
+  "description": "Dev Academy version of facebook",
+  "main": "server.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevBook/DevBook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevBook/DevBook/issues"
+  },
+  "homepage": "https://github.com/DevBook/DevBook#readme",
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
