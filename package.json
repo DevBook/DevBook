@@ -4,7 +4,8 @@
   "description": "Dev Academy version of facebook",
   "main": "server.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
