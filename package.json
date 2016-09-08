@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/DevBook/DevBook#readme",
   "devDependencies": {
+    "chimp": "^0.40.6",
     "nodemon": "^1.10.2"
   },
   "dependencies": {
