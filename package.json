@@ -4,9 +4,9 @@
   "description": "Dev Academy version of facebook",
   "main": "server.js",
   "scripts": {
-    "test": "chimp --watch",
     "start": "node server.js",
-    "devstart": "nodemon server.js"
+    "devstart": "nodemon server.js",
+    "test": "chimp --watch"
   },
   "repository": {
     "type": "git",
