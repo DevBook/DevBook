@@ -4,9 +4,9 @@
   "description": "Dev Academy version of facebook",
   "main": "server.js",
   "scripts": {
+    "test": "chimp --watch",
     "start": "node server.js",
-    "devstart": "nodemon server.js",
-    "test": "chimp --watch"
+    "devstart": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "nodemon": "^1.10.2"
   },
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
   }
 }
