@@ -9,9 +9,13 @@ app.set('view engine', 'handlebars')
 
 //route to basic server
 app.get('/', function (req, res) {
-  res.send("Hello I tested myself!!!")
+  db.getAll('dev-stars', function (err, devstarsObj) {
+    if(err) {
+      callback(err)
+    }
+    console.log(devstarsObj);
+    res.render('devstars-index', devstarsObj)
+  })
 })
-
-//TO DO make redirect
 
 module.exports = app

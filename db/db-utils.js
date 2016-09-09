@@ -6,7 +6,8 @@ function getAll(resource, callback) {
       console.log("ERROR: ", err)
       callback(err)
     }
-    callback(null, fileContents)
+
+    callback(null, JSON.parse(fileContents))
   })
 }
 
