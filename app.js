@@ -1,11 +1,15 @@
 var express = require('express')
 var db = require('./db/db-utils')
+var path = require('path')
 var exphbs = require('express-handlebars')
 var app = express()
 
 //view engine setup
 app.engine('handlebars', exphbs({defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
+
+// serve the files in public
+app.use(express.static(path.join(__dirname, 'public')))
 
 //route to basic server
 app.get('/', function (req, res) {
