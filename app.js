@@ -9,9 +9,29 @@ app.set('view engine', 'handlebars')
 
 //route to basic server
 app.get('/', function (req, res) {
-  res.send("Hello I tested myself!!!")
+  db.getAll('dev-stars', function (err, devstarsObj) {
+    if(err) {
+      callback(err)
+    }
+
+    res.render('devstars-index', devstarsObj)
+  })
 })
 
-//TO DO make redirect
+app.get('/devstars/:id', function (req, res) {
+  db.getAll('dev-stars', function (err, devstarsObj) {
+    if(err) {
+      callback(err)
+    }
+
+
+    var devstar = devstarsObj.devstars.filter(function (person) {
+      return person.id === Number(req.params.id)
+    })[0]
+
+    res.render('devstars-bio', devstar)
+  })
+})
+
 
 module.exports = app
