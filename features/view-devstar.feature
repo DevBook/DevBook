@@ -9,4 +9,4 @@ Feature: View profile
     When I click on the image "https://avatars2.githubusercontent.com/u/13898345?v=3&s=460"
     Then I am redirected to the "/devstars/3" page
     And I can see the list item "29"
-    And I can see the list item "I am from Zimbabwe."
+    And I can see the list item "I am from Zimbabwe"
