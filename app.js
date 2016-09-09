@@ -36,6 +36,6 @@ app.get('/devstars/:id', function (req, res) {
     res.render('devstars-bio', devstar)
   })
 })
-
+ 
 
 module.exports = app
