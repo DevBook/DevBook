@@ -13,9 +13,25 @@ app.get('/', function (req, res) {
     if(err) {
       callback(err)
     }
-    console.log(devstarsObj);
+
     res.render('devstars-index', devstarsObj)
   })
 })
+
+app.get('/devstars/:id', function (req, res) {
+  db.getAll('dev-stars', function (err, devstarsObj) {
+    if(err) {
+      callback(err)
+    }
+
+  
+    var devstar = devstarsObj.devstars.filter(function (person) {
+      return person.id === Number(req.params.id)
+    })[0]
+
+    res.render('devstars-bio', devstar)
+  })
+})
+
 
 module.exports = app
