@@ -26,7 +26,17 @@ module.exports = function () {
     const url = browser.getUrl()
     assert.equal(Url.parse(url).pathname, pathname, callback)
   })
+
   this.When('I click on the input with value "$string"', function (value) {
     browser.click(`input[value="${value}"]`)
+  })
+
+  this.When('I click on the image "$string"', function (value) {
+    browser.click(`img[src="${value}"]`)
+  })
+
+  this.Then('I can see the image "$string"', function (imageLink, callback) {
+    const imageExists = browser.waitForExist(`img[src="${imageLink}"]`)
+    assert.equal(imageExists, true, callback)
   })
 }
