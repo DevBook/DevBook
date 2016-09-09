@@ -4,8 +4,8 @@
   "description": "Dev Academy version of facebook",
   "main": "server.js",
   "scripts": {
-    "test": "node test.js",
-    "start": "server.js",
+    "test": "chimp --watch",
+    "start": "node server.js",
     "devstart": "nodemon server.js"
   },
   "repository": {
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/DevBook/DevBook#readme",
   "devDependencies": {
+    "chimp": "^0.40.6",
+    "cucumber-assert": "^1.0.4",
     "nodemon": "^1.10.2"
   },
   "dependencies": {
