@@ -5,7 +5,7 @@ Feature: View profile
 
   @watch
   Scenario: I want to a devstar's profile
-    Given I am viewing the page at "/devstars"
+    Given I am viewing the page at "/"
     When I click on the image "https://avatars2.githubusercontent.com/u/13898345?v=3&s=460"
     Then I am redirected to the "/devstars/3" page
     And I can see the list item "29"
