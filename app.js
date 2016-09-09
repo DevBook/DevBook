@@ -24,7 +24,7 @@ app.get('/devstars/:id', function (req, res) {
       callback(err)
     }
 
-  
+
     var devstar = devstarsObj.devstars.filter(function (person) {
       return person.id === Number(req.params.id)
     })[0]
