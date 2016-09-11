@@ -39,4 +39,9 @@ module.exports = function () {
     const imageExists = browser.waitForExist(`img[src="${imageLink}"]`)
     assert.equal(imageExists, true, callback)
   })
+
+  this.Then('I can see the header "$string"', function (header, callback) {
+    const imageExists = browser.waitForExist(`h1=${header}`)
+    assert.equal(imageExists, true, callback)
+  })
 }

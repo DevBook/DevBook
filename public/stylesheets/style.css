@@ -13,16 +13,17 @@ ul {
   list-style-type: none;
 }
 
-li {
+li, p {
   font-size: 2em;
-  margin: 20px auto;
+  margin: 20px 5% 0;
   font-family: 'Lobster', cursive;
 }
+
 
 img {
   width: 250px;
   height: 250px;
-  margin-top:50px;
+  margin-top:30px;
   border-radius: 50px;
   border: 6px solid firebrick;
 }
@@ -42,4 +43,27 @@ h1 {
   border-left: 4px solid firebrick;
   border-right: 4px solid firebrick;
   min-height: 100vh;
+  padding-bottom: 50px;
+}
+.button {
+  background: firebrick;
+  color: #fff;
+  width: 40%;
+  height: 45px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+input {
+  width: 60%;
+  height: 30px;
+  color: #000;
+  padding-left: 5px;
+  font-size: 1rem;
+  border: 2px solid black;
+}
+
+form {
+  margin-top: 20px;
 }
