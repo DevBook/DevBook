@@ -3,6 +3,8 @@ var db = require('./db/db-utils')
 var path = require('path')
 var exphbs = require('express-handlebars')
 var app = express()
+var Knex = require('knex')
+var knex = Knex(require('./knexfile').development)
 
 //view engine setup
 app.engine('handlebars', exphbs({defaultLayout: 'main'}))
@@ -13,29 +15,24 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 //route to basic server
 app.get('/', function (req, res) {
-  db.getAll('dev-stars', function (err, devstarsObj) {
-    if(err) {
-      callback(err)
-    }
-
-    res.render('devstars-index', devstarsObj)
+  knex.select().from('users').then( function (devstars) {
+    res.render('devstars-index', {devstars:devstars})
+  }).catch(function (err) {
+    console.log(err)
   })
 })
 
 app.get('/devstars/:id', function (req, res) {
-  db.getAll('dev-stars', function (err, devstarsObj) {
-    if(err) {
-      callback(err)
-    }
-
-
-    var devstar = devstarsObj.devstars.filter(function (person) {
-      return person.id === Number(req.params.id)
-    })[0]
-
-    res.render('devstars-bio', devstar)
-  })
+  knex.select()
+    .from('users')
+    .where('id', Number(req.params.id))
+    .then (function (devstar) {
+      res.render('devstars-bio', devstar[0])
+    }).catch( function (err) {
+      console.log(err);
+    })
 })
- 
+
+
 
 module.exports = app
