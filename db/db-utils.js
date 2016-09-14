@@ -11,6 +11,14 @@ function getAll(resource, callback) {
   })
 }
 
+function write (resource, file, callback) {
+  fs.writeFile(`${__dirname}/${resource}.json`, JSON.stringify(file), function (err) {
+    if (err) callback(err)
+    console.log('New Dev-Star complete!')
+  })
+}
+
 module.exports = {
-  getAll:getAll
+  getAll:getAll,
+  write: write
 }
