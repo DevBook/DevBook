@@ -16,6 +16,10 @@ app.set('view engine', 'handlebars')
 app.use(express.static(path.join(__dirname, 'public')))
 
 //route to basic server
+app.get('/add-dev-star', function (req, res) {
+  res.render('devstars-add')
+})
+
 app.get('/', function (req, res) {
   db.getAll('dev-stars', function (err, devstarsObj) {
     if(err) {
@@ -24,10 +28,6 @@ app.get('/', function (req, res) {
 
     res.render('devstars-index', devstarsObj)
   })
-})
-
-app.get('/add-dev-star', function (req, res) {
-  res.render('devstars-add')
 })
 
 app.get('/devstars/:id', function (req, res) {

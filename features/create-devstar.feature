@@ -1,6 +1,6 @@
 Feature: New Dev-Star
 
-
+@watch
   Scenario: I want to add a new dev-star
     Given I am viewing the page at "/add-dev-star"
     When I enter "Peter" into the "name" input

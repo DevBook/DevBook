@@ -1,6 +1,6 @@
 Feature: Go Home
 
-
+@watch
   Scenario: I want to go home
     Given I am viewing the page at "/devstars/3"
     When I click on the input with value "Go Home"
