@@ -63,5 +63,13 @@ app.post('/', function (req, res) {
 }
 })
 
+app.get('/statistics', function (req, res) {
+  db.getAll('dev-stars', function (err, devstarsObj) {
+    var stars = devstarsObj.devstars
+    // var maxAge =
+    console.log(devstarsObj.devstars)
+    res.render('statistics', devstarsObj)
+  })
+})
 
 module.exports = app
